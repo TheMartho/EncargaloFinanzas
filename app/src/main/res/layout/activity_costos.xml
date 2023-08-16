@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".costos">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="287dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/is_imglogo"
+            android:contentDescription="Encargalo" />
+
+        <Button
+            android:id="@+id/btn_sueldo_emprendedor"
+            android:layout_width="300dp"
+            android:layout_height="70dp"
+            android:text="Sueldo del emprendedor"
+            android:layout_marginTop="50dp"
+            android:background="@color/colorPrimaryDark"
+            android:textAllCaps="true"
+            android:textAlignment="center"
+            android:drawablePadding="10dp"
+            />
+
+        <Button
+            android:id="@+id/btn_costos"
+            android:layout_width="300dp"
+            android:layout_height="70dp"
+            android:text="Costos de operación"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorPrimaryDark"
+            android:textAllCaps="true"
+            android:textAlignment="center"
+            android:drawablePadding="10dp"
+            />
+
+        <Button
+            android:id="@+id/btn_depreciacion"
+            android:layout_width="300dp"
+            android:layout_height="70dp"
+            android:text="Depreciación"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorPrimaryDark"
+            android:textAllCaps="true"
+            android:textAlignment="center"
+            android:drawablePadding="10dp"
+            />
+
+        <Button
+            android:id="@+id/btn_amortizacion"
+            android:layout_width="300dp"
+            android:layout_height="70dp"
+            android:text="Amortización"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorPrimaryDark"
+            android:textAllCaps="true"
+            android:textAlignment="center"
+            android:drawablePadding="10dp"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>
