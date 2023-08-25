@@ -1,8 +1,7 @@
-package com.example.encargalofinanzas;
+package mx.encargalo.finanzas;
 
 import android.content.Context;
 import android.view.Gravity;
-import android.view.ViewGroup;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;

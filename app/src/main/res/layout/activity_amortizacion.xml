@@ -26,7 +26,7 @@
                 <Button
                     android:id="@+id/btn_limpiar"
                     android:layout_width="118dp"
-                    android:layout_height="46dp"
+                    android:layout_height="48dp"
                     android:text="@string/txt_Limpiar_Boton"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"

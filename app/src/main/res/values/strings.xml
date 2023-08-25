@@ -14,13 +14,12 @@
     <string name="txt_nombre_PagoAnticipado_String">Pago anticipado</string>
 
     <string name="txt_Volver_Boton">Volver</string>
-
     <string name="txt_Limpiar_Boton">Limpiar</string>
 
 
-    <string name="txt_Limpiar_Boton">Total necesarios</string>
-    <string name="txt_Limpiar_Boton">Total no necesarios</string>
-    <string name="txt_Limpiar_Boton">Limpiar</string>
+    <string name="txt_total_Boton">Total necesarios</string>
+    <string name="txt_Total_no_necesarios">Total no necesarios</string>
+    <string name="txt_Limpiar">Limpiar</string>
 
 
 </resources>
