@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".amortizacion">
+    tools:context=".depreciacion">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,18 +15,18 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="398dp"
             android:orientation="vertical"
-            android:padding="16dp">
+            android:padding="16dp">  
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content">
 
                 <Button
                     android:id="@+id/btn_limpiar"
-                    android:layout_width="118dp"
-                    android:layout_height="46dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:text="@string/txt_Limpiar_Boton"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -47,10 +47,10 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="89dp">
+                android:layout_height="92dp">
 
                 <TextView
-                    android:id="@+id/txt_cantidadMensual_1"
+                    android:id="@+id/txt_cantidadMensual"
                     android:layout_width="100dp"
                     android:layout_height="17dp"
                     android:layout_marginTop="24dp"
@@ -61,7 +61,20 @@
                     app:layout_constraintVertical_bias="0.0" />
 
                 <TextView
-                    android:id="@+id/txt_AcumuladoPago"
+                    android:id="@+id/txt_cantidadAnual"
+                    android:layout_width="100dp"
+                    android:layout_height="17dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="24dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/txt_cantidadMensual"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@+id/txt_cantidadTotal"
+                    app:layout_constraintTop_toBottomOf="@+id/textView5"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/txt_cantidadTotal"
                     android:layout_width="100dp"
                     android:layout_height="17dp"
                     android:layout_marginStart="16dp"
@@ -77,7 +90,7 @@
                     android:layout_height="17dp"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
-                    android:text="@string/txt_nombre_PagoAnticipado_String"
+                    android:text="@string/txt_nombre_total_String"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -101,45 +114,41 @@
                     android:text="@string/txt_Mensual_String"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/txt_cantidadAnual_1"
-                    android:layout_width="100dp"
-                    android:layout_height="17dp"
-                    android:layout_marginTop="24dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/txt_cantidadMensual_1"
-                    app:layout_constraintStart_toEndOf="@+id/txt_AcumuladoPago"
-                    app:layout_constraintTop_toBottomOf="@+id/textView5"
-                    app:layout_constraintVertical_bias="0.0" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <EditText
-                android:id="@+id/txt_activoDiferido"
+                android:id="@+id/txt_activoFijo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/txt_nombreActivoDiferido_String"
+                android:hint="@string/txt_nombre_activoFijo_String"
                 android:inputType="text" />
 
             <EditText
-                android:id="@+id/txt_pagoAnticipado"
+                android:id="@+id/txt_unidades"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/txt_pagoAnticipado_String"
+                android:hint="@string/txt_nombre_unidades_String"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/txt_valorUnitario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/txt_nombre_valorUnitario_String"
                 android:inputType="number|numberDecimal" />
 
             <EditText
-                android:id="@+id/txt_vigencia"
+                android:id="@+id/txt_vidaUtil"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/txt_Vigencia_String"
+                android:hint="@string/txt_nombre_vidaUtil_String"
                 android:inputType="number" />
 
             <Button
                 android:id="@+id/agregarButton"
                 android:layout_width="199dp"
                 android:layout_height="wrap_content"
-                android:onClick="agregarItem"
+                android:onClick="agregarActivoFijo"
                 android:text="Agregar" />
 
         </LinearLayout>
@@ -151,19 +160,38 @@
 
             <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent">
 
                 <HorizontalScrollView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fillViewport="true">
+                    android:layout_height="wrap_content">
 
-                    <TableLayout
-                        android:id="@+id/tbllayout_amortizacion"
+                    <LinearLayout
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent">
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
-                    </TableLayout>
+                        <TableLayout
+                            android:id="@+id/tableLayout1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <!-- Agrega tus filas y celdas para la tabla 1 aquí -->
+
+                        </TableLayout>
+
+                        <TableLayout
+                            android:id="@+id/tableLayout2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <!-- Agrega tus filas y celdas para la tabla 2 aquí -->
+
+                        </TableLayout>
+
+                    </LinearLayout>
                 </HorizontalScrollView>
             </ScrollView>
 
@@ -171,6 +199,4 @@
 
         <!-- Parte para mostrar la tabla -->
     </LinearLayout>
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

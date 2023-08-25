@@ -1,3 +1,26 @@
 <resources>
     <string name="app_name">EncargaloFinanzas</string>
+    <string name="txt_nombreActivoDiferido_String">Nombre de activo diferido</string>
+    <string name="txt_pagoAnticipado_String">Pago anticipado</string>
+    <string name="txt_Vigencia_String">Vigencia en años</string>
+    <string name="txt_Anual_String">Anual</string>
+    <string name="txt_Mensual_String">Mensual</string>
+
+    <string name="txt_nombre_activoFijo_String">Nombre de activo fijo</string>
+    <string name="txt_nombre_unidades_String">Unidades</string>
+    <string name="txt_nombre_valorUnitario_String">Valor  unitario</string>
+    <string name="txt_nombre_total_String">Total</string>
+    <string name="txt_nombre_vidaUtil_String">Vida útil</string>
+    <string name="txt_nombre_PagoAnticipado_String">Pago anticipado</string>
+
+    <string name="txt_Volver_Boton">Volver</string>
+
+    <string name="txt_Limpiar_Boton">Limpiar</string>
+
+
+    <string name="txt_Limpiar_Boton">Total necesarios</string>
+    <string name="txt_Limpiar_Boton">Total no necesarios</string>
+    <string name="txt_Limpiar_Boton">Limpiar</string>
+
+
 </resources>
