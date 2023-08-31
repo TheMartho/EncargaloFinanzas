@@ -20,6 +20,9 @@
     <string name="txt_total_Boton">Total necesarios</string>
     <string name="txt_Total_no_necesarios">Total no necesarios</string>
     <string name="txt_Limpiar">Limpiar</string>
+    <string name="txt_necesarios">Importe Necesarios</string>
+    <string name="txt_no_necesarios">Importe No Necesarios</string>
+    <string name="txt_sueldo_emprendedor">Suledo Del Emprendedor</string>
 
 
 </resources>

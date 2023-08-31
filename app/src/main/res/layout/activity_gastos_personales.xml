@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".depreciacion">
+
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,7 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="398dp"
             android:orientation="vertical"
-            android:padding="16dp">  
+            android:padding="16dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -50,10 +53,10 @@
                 android:layout_height="92dp">
 
                 <TextView
-                    android:id="@+id/txt_cantidadMensual"
+                    android:id="@+id/txt_sueldoEmprendedor"
                     android:layout_width="100dp"
                     android:layout_height="17dp"
-                    android:layout_marginTop="24dp"
+                    android:layout_marginTop="12dp"
                     android:layout_marginEnd="16dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -61,24 +64,24 @@
                     app:layout_constraintVertical_bias="0.0" />
 
                 <TextView
-                    android:id="@+id/txt_cantidadAnual"
+                    android:id="@+id/txt_noNecesarios"
                     android:layout_width="100dp"
                     android:layout_height="17dp"
-                    android:layout_marginTop="24dp"
+                    android:layout_marginTop="12dp"
                     android:layout_marginEnd="24dp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/txt_cantidadMensual"
+                    app:layout_constraintEnd_toStartOf="@+id/txt_sueldoEmprendedor"
                     app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintStart_toEndOf="@+id/txt_cantidadTotal"
+                    app:layout_constraintStart_toEndOf="@+id/txt_necesarios"
                     app:layout_constraintTop_toBottomOf="@+id/textView5"
                     app:layout_constraintVertical_bias="0.0" />
 
                 <TextView
-                    android:id="@+id/txt_cantidadTotal"
+                    android:id="@+id/txt_necesarios"
                     android:layout_width="100dp"
                     android:layout_height="17dp"
                     android:layout_marginStart="16dp"
-                    android:layout_marginTop="24dp"
+                    android:layout_marginTop="12dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView3"
@@ -87,19 +90,19 @@
                 <TextView
                     android:id="@+id/textView3"
                     android:layout_width="100dp"
-                    android:layout_height="17dp"
-                    android:layout_marginStart="16dp"
+                    android:layout_height="41dp"
+                    android:layout_marginStart="15dp"
                     android:layout_marginTop="16dp"
-                    android:text="@string/txt_nombre_total_String"
+                    android:text="@string/txt_necesarios"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/textView5"
-                    android:layout_width="100dp"
-                    android:layout_height="17dp"
+                    android:layout_width="103dp"
+                    android:layout_height="41dp"
                     android:layout_marginTop="16dp"
-                    android:text="@string/txt_Anual_String"
+                    android:text="@string/txt_no_necesarios"
                     app:layout_constraintEnd_toStartOf="@+id/textView4"
                     app:layout_constraintHorizontal_bias="0.489"
                     app:layout_constraintStart_toEndOf="@+id/textView3"
@@ -107,45 +110,60 @@
 
                 <TextView
                     android:id="@+id/textView4"
-                    android:layout_width="100dp"
-                    android:layout_height="17dp"
+                    android:layout_width="104dp"
+                    android:layout_height="41dp"
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="16dp"
-                    android:text="@string/txt_Mensual_String"
+                    android:text="@string/txt_sueldo_emprendedor"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
+
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <EditText
                 android:id="@+id/txt_activoFijo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/txt_nombre_activoFijo_String"
-                android:inputType="text" />
-
-            <EditText
-                android:id="@+id/txt_unidades"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/txt_nombre_unidades_String"
+                android:hint="Nombre del Gasto"
                 android:inputType="text" />
 
             <EditText
                 android:id="@+id/txt_valorUnitario"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/txt_nombre_valorUnitario_String"
+                android:hint="Importe"
                 android:inputType="number|numberDecimal" />
 
-            <EditText
-                android:id="@+id/txt_vidaUtil"
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/txt_nombre_vidaUtil_String"
-                android:inputType="number" />
+                android:text="Tipo de gasto"
+                android:layout_marginTop="10dp"
+                android:textSize="20dp"
+                >
+
+            </TextView>
+
+            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <RadioButton android:id="@+id/radio_pirates"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Necesario"
+                    android:onClick="onRadioButtonClicked"/>
+                <RadioButton android:id="@+id/radio_ninjas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:text="No Necesario"
+                    android:onClick="onRadioButtonClicked"/>
+            </RadioGroup>
+
 
             <Button
-                android:id="@+id/agregarButton"
+                android:id="@+id/agregarGasto"
                 android:layout_width="199dp"
                 android:layout_height="wrap_content"
                 android:onClick="agregarActivoFijo"
@@ -199,4 +217,4 @@
 
         <!-- Parte para mostrar la tabla -->
     </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
