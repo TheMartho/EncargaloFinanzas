@@ -2,6 +2,8 @@ package com.example.encargalofinanzas;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -9,6 +11,11 @@ import android.widget.TableLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+
+import kotlin.contracts.Returns;
 
 public class amortizacion extends AppCompatActivity {
 
@@ -35,13 +42,17 @@ public class amortizacion extends AppCompatActivity {
         vigencia = (EditText)findViewById(R.id.txt_vigencia);
         tableDynamic =new TableDynamic(table_amortizacion, getApplicationContext());
         tableDynamic.addHeader(header);
+        //tableDynamic.addData(cargarRegistrosBD());
 
         cantidadPagoAnticipado =(TextView)findViewById(R.id.txt_AcumuladoPago);
         cantidadAnual =(TextView)findViewById(R.id.txt_cantidadAnual_1);
         cantidadMensual =(TextView)findViewById(R.id.txt_cantidadMensual_1);
-
     }
 
+    public ArrayList<String[]> cargarRegistrosBD(){
+        rows.add(new String[]{"1"});
+        return rows;
+    }
     public double calcularAnual(double pagoAnticipado, int vigencia){
         if (vigencia == 0) {
             throw new ArithmeticException("No se puede dividir por 0");
@@ -61,7 +72,8 @@ public class amortizacion extends AppCompatActivity {
         }
         return 0.0;
     }
-    public void agregarItem(View view){
+
+    public String[] insertarDatosEnArray(){
 
         double pagoAnticipadoCalculado = Double.parseDouble(pagoAnticipado.getText().toString());
         double anualCalculado = calcularAnual(Double.parseDouble(pagoAnticipado.getText().toString()), Integer.parseInt(vigencia.getText().toString()));
@@ -71,14 +83,18 @@ public class amortizacion extends AppCompatActivity {
         acumular(1, anualCalculado); // Acumulado del anual
         acumular(2, mensualCalculado); // Acumulado del mensual
 
-        String[] item = new String[]{
+        String[] array = new String[]{
                 activoDiferido.getText().toString(),
                 pagoAnticipado.getText().toString(),
                 vigencia.getText().toString(),
                 Double.toString(anualCalculado),
                 Double.toString(mensualCalculado)
         };
-        tableDynamic.addItems(item);
+        return array;
+    }
+    public void agregarItem(View view){
+
+        tableDynamic.addItems(insertarDatosEnArray());
 
         // mostrar el acumulado
         cantidadPagoAnticipado.setText(String.valueOf(obtenerAcumulado(0)));

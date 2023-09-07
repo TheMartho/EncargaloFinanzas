@@ -2,16 +2,11 @@ package com.example.encargalofinanzas;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TableLayout;
 import android.widget.TextView;
-
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.util.ArrayList;
 
@@ -38,8 +33,8 @@ public class depreciacion extends AppCompatActivity {
         setContentView(R.layout.activity_depreciacion);
 
         table_depreciacion = (TableLayout)findViewById(R.id.tbllayout_depreciacion);
-        activoFijo = (EditText) findViewById(R.id.txt_activoFijo);
-        unidades = (EditText) findViewById(R.id.txt_unidades);
+        activoFijo = (EditText) findViewById(R.id.txt_nombreGasto);
+        unidades = (EditText) findViewById(R.id.txt_montoImporte);
         valorUnitario = (EditText) findViewById(R.id.txt_valorUnitario);
         vidaUtil = (EditText) findViewById(R.id.txt_vidaUtil);
         tableDynamic = new TableDynamic(table_depreciacion, getApplicationContext());

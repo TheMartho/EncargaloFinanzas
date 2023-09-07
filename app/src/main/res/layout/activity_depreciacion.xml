@@ -117,14 +117,14 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <EditText
-                android:id="@+id/txt_activoFijo"
+                android:id="@+id/txt_nombreGasto"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/txt_nombre_activoFijo_String"
                 android:inputType="text" />
 
             <EditText
-                android:id="@+id/txt_unidades"
+                android:id="@+id/txt_montoImporte"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/txt_nombre_unidades_String"

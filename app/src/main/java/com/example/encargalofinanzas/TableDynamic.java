@@ -83,6 +83,9 @@ public class TableDynamic {
             txtCell.setText(info);
             tableRow.addView(txtCell,newTableRowParams());
         }
+        //if (data.size() > 0){
+          //  tableLayout.addView(tableRow, data.size()-1);
+        //}
         tableLayout.addView(tableRow, data.size());
     }
 

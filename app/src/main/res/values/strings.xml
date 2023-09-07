@@ -18,9 +18,9 @@
     <string name="txt_Limpiar_Boton">Limpiar</string>
 
 
-    <string name="txt_Limpiar_Boton">Total necesarios</string>
-    <string name="txt_Limpiar_Boton">Total no necesarios</string>
-    <string name="txt_Limpiar_Boton">Limpiar</string>
+    <string name="txt_Total_necesarios">Total necesarios</string>
+    <string name="txt_Total_noNecesarios">Total no necesarios</string>
+    <string name="title_activity_gastospersonales1">gastospersonales1</string>
 
 
 </resources>
