@@ -1,14 +1,15 @@
-package com.example.encargalofinanzas;
-
-import androidx.appcompat.app.AppCompatActivity;
+package mx.encargalo.finanzas;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TableLayout;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -30,6 +31,8 @@ public class amortizacion extends AppCompatActivity {
     private TextView cantidadPagoAnticipado;
     private TextView cantidadAnual;
     private TextView cantidadMensual;
+     Button btnLimpiar;
+     Button btnVolver;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +50,32 @@ public class amortizacion extends AppCompatActivity {
         cantidadPagoAnticipado =(TextView)findViewById(R.id.txt_AcumuladoPago);
         cantidadAnual =(TextView)findViewById(R.id.txt_cantidadAnual_1);
         cantidadMensual =(TextView)findViewById(R.id.txt_cantidadMensual_1);
+<<<<<<< HEAD:app/src/main/java/com/example/encargalofinanzas/amortizacion.java
+=======
+        btnLimpiar = (Button)findViewById(R.id.btn_limpiar);
+        btnVolver = (Button)findViewById(R.id.btn_Volver2);
+
+        btnLimpiar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                limpiar();
+            }
+        });
+
+        btnVolver.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+    }
+
+    public void limpiar(){
+        activoDiferido.setText("");
+        pagoAnticipado.setText("");
+        vigencia.setText("");
+>>>>>>> bdf1117909a503d8bc2875df92192064265318f0:app/src/main/java/mx/encargalo/finanzas/amortizacion.java
     }
 
     public ArrayList<String[]> cargarRegistrosBD(){
@@ -100,6 +129,7 @@ public class amortizacion extends AppCompatActivity {
         cantidadPagoAnticipado.setText(String.valueOf(obtenerAcumulado(0)));
         cantidadAnual.setText(String.valueOf(obtenerAcumulado(1)));
         cantidadMensual.setText(String.valueOf(obtenerAcumulado(2)));
+        limpiar();
     }
 
 }

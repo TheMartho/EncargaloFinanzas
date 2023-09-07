@@ -16,6 +16,7 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+<<<<<<< HEAD
             android:name=".gastospersonales"
             android:exported="false" />
         <activity
@@ -34,9 +35,48 @@
             android:exported="false" />
         <activity
             android:name=".plantilla_financiera"
+=======
+            android:name=".gastos_personales"
+>>>>>>> bdf1117909a503d8bc2875df92192064265318f0
             android:exported="false" />
         <activity
             android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".plantilla_financiera"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".amortizacion"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".costos"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".depreciacion"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

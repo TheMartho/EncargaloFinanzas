@@ -1,11 +1,12 @@
-package com.example.encargalofinanzas;
+package mx.encargalo.finanzas;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class plantilla_financiera extends AppCompatActivity {
 
@@ -13,14 +14,13 @@ public class plantilla_financiera extends AppCompatActivity {
     Button btn_costos;
     Button btn_manufacturas;
     Button btn_personal;
-
+Context context = this;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_plantilla_financiera);
-
         btn_negocio=(Button)findViewById(R.id.btn_negocio);
         btn_negocio.setOnClickListener(new View.OnClickListener() {
             @Override

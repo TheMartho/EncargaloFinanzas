@@ -1,4 +1,4 @@
-package com.example.encargalofinanzas;
+package mx.encargalo.finanzas;
 
 import org.junit.Test;
 

@@ -14,13 +14,21 @@
     <string name="txt_nombre_PagoAnticipado_String">Pago anticipado</string>
 
     <string name="txt_Volver_Boton">Volver</string>
-
     <string name="txt_Limpiar_Boton">Limpiar</string>
 
 
+<<<<<<< HEAD
     <string name="txt_Total_necesarios">Total necesarios</string>
     <string name="txt_Total_noNecesarios">Total no necesarios</string>
     <string name="title_activity_gastospersonales1">gastospersonales1</string>
+=======
+    <string name="txt_total_Boton">Total necesarios</string>
+    <string name="txt_Total_no_necesarios">Total no necesarios</string>
+    <string name="txt_Limpiar">Limpiar</string>
+    <string name="txt_necesarios">Importe Necesarios</string>
+    <string name="txt_no_necesarios">Importe No Necesarios</string>
+    <string name="txt_sueldo_emprendedor">Suledo Del Emprendedor</string>
+>>>>>>> bdf1117909a503d8bc2875df92192064265318f0
 
 
 </resources>
